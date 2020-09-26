@@ -1,0 +1,49 @@
+.registerContainer{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 94%;
+    flex-direction: column;
+}
+.userInput{
+    width: 250px;
+    margin: 20px;
+    border-radius: 14px;
+    border: 1px darkgray solid;
+    background: lightgray;
+    height: 40px;
+    padding: 4px 15px;
+  }
+  .userInput:focus{
+    outline: none;
+  }
+.registerBtn{
+    background: green;
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    font-size: x-large;
+    border-radius: 15px;
+    border: 1px solid darkgreen;
+    margin-left: 20px;
+    float: left;
+    cursor: pointer;
+}
+.registerBtn:focus{
+    outline: none;
+}
+.cancelBtn{
+    text-decoration: none;
+    position: relative;
+    top: 12px;
+    cursor: pointer;
+}
+.errorMsg{
+    color: red;
+    display: flex;    
+    justify-content: flex-start;
+    margin-left: 24px;
+    margin-bottom: 2px;
+    margin-top: -15px;
+}

@@ -1,0 +1,15 @@
+<div class="container">
+    <div style="font-size: xx-large;">
+        Movies 
+    </div>
+    <div>
+       Welcome {{Email}} <a [routerLink]="['/login']" class="logout">Logout</a>
+    </div>
+</div>
+<div class="movies">
+    <div class="block" *ngFor="let movie of movies">
+      <figure>
+        <img [src]="movie.image" [alt]="movie.name" />
+      </figure>
+    </div>
+  </div>

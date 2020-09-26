@@ -1,0 +1,31 @@
+<div class="container" #scrollMe>
+    <div class="flex">
+        <img src="assets/LeftImage.png" alt="login background" />
+    </div>
+    <div class="flex">
+        <span style="font-weight: bold;">Member Login</span>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="fontPosition">
+                <input class="userInput" type="text" formControlName="email"  placeholder="Email"  />
+                <i class="fas fa-envelope">  </i>
+                <div class="errorMsg" *ngIf=" submitted && loginForm.controls.email.errors">
+                    <div *ngIf="loginForm.controls.email.errors.required || loginForm.controls.email.errors.pattern">Enter a valid email</div>
+                </div>
+            </div>
+            <div class="fontPosition">  
+                <i class="fas fa-lock"></i>            
+                <input  class="userInput" type="password" formControlName="password"  placeholder="Password"  />
+                <div class="errorMsg" *ngIf="submitted && loginForm.controls.password.errors">
+                    <div *ngIf="loginForm.controls.password.errors.required">Password is required</div>
+                </div>
+            </div>
+            <div>
+                <button class="btn">Login</button> 
+            </div>
+            <div style="cursor: pointer;">Forgot email/password?</div>
+        </form>
+        <div style="color:red">{{errmsg}}</div>
+        <a [routerLink]="['/register']" class="register-btn">Create your account<i class="fas fa-arrow-right rightArrow"></i></a>
+    </div>
+    
+</div>

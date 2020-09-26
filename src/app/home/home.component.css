@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    color: #fff;
+    height: 40px;
+    align-items: center;
+    padding: 15px;
+}
+.logout{
+    color:#fff;
+    margin-left: 15px;
+}
+
+.movies{    
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;    
+    margin-bottom: 25px;
+}
+.block{
+    display: inline-block;
+    cursor: pointer;
+}
+figure img{
+    width: 200px;
+    margin: 8px auto;
+    transition: all 0.3s ease-in;
+ }
+ figure img:hover{
+    transform: scale(1.2); 
+ }

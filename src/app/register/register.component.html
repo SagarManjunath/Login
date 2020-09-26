@@ -1,0 +1,36 @@
+<div class="registerContainer">
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <span style="font-weight: bold; font-size: 35px;">Register here</span>
+        <div>
+            <input class="userInput" type="text" formControlName="firstName" placeholder="First Name" required />
+            <div class="errorMsg" *ngIf="submitted && registerForm.controls.firstName.errors">
+                <div *ngIf="registerForm.controls.firstName.errors.required">First Name is required</div>
+            </div>
+        </div>
+        <div>
+            <input class="userInput" type="text" formControlName="lastName" placeholder="Last Name"  required/>
+            <div class="errorMsg" *ngIf="submitted && registerForm.controls.lastName.errors">
+                <div *ngIf="registerForm.controls.lastName.errors.required">Last Name is required</div>
+            </div>
+        </div>
+        <div>
+            <input class="userInput" type="email" formControlName="email" placeholder="Email"  required/>
+            <div class="errorMsg" *ngIf="submitted && registerForm.controls.email.errors">
+                <div *ngIf="registerForm.controls.email.errors.required || registerForm.controls.email.errors.pattern">Enter a valid email</div>
+            </div>
+        </div>
+        <div>
+            <input class="userInput" type="password" formControlName="password" placeholder="Password" required />
+            <div class="errorMsg" *ngIf="submitted && registerForm.controls.password.errors">
+                <div *ngIf="registerForm.controls.password.errors.required">Password is required</div>
+            </div>
+        </div>
+        <div>
+            <button class="registerBtn">Register</button>
+            <a class="cancelBtn" [routerLink]="['/login']" >Cancel</a>
+        </div>
+        
+
+    </form>
+    <div>{{msg}}</div>
+</div>
